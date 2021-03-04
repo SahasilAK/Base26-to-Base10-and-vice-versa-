@@ -48,9 +48,9 @@ def base26_valueGenerator(d1,d2,ls):
                     val1_alph = key + val1_alph
 
 
-                if value == d1_quo:
-                    val1_alph = key + val1_alph
-                    run1 = False
+            if d1_quo == 0:
+                val1_alph = key + val1_alph
+                run1 = False
 
 
         if run2:
@@ -61,9 +61,9 @@ def base26_valueGenerator(d1,d2,ls):
                 if value == d2_rem:
                     val2_alph = key + val2_alph
 
-                if value == d2_quo:
-                    val2_alph = key + val2_alph
-                    run2 = False
+            if d2_quo == 0:
+                
+                run2 = False
 
 
     print(f'{d1}({val1_alph})')
