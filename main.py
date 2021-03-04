@@ -43,27 +43,24 @@ def base26_valueGenerator(d1,d2,ls):
             d1_rem = d1_quo%26
             d1_quo = int(d1_quo/26)
 
-            for key,value in ls.items():
-                if value == d1_rem:
-                    val1_alph = key + val1_alph
-
-
-            if d1_quo == 0:
-                
+            x = list(ls.keys())[list(ls.values()).index(d1_rem)]
+            val1_alph = x + val1_alph
+            if d1_quo in ls.values():
+                x = list(ls.keys())[list(ls.values()).index(d1_quo)]
+                val1_alph = x + val1_alph
                 run1 = False
-
 
         if run2:
             d2_rem = d2_quo%26
             d2_quo = int(d2_quo/26)
-
-            for key, value in ls.items():
-                if value == d2_rem:
-                    val2_alph = key + val2_alph
-
-            if d2_quo == 0:
-                
+            y = list(ls.keys())[list(ls.values()).index(d2_rem)]
+            val2_alph = y + val2_alph
+            if d2_quo in ls.values():
+                y = list(ls.keys())[list(ls.values()).index(d2_quo)]
+                val2_alph = y + val2_alph
                 run2 = False
+
+
 
 
     print(f'{d1}({val1_alph})')
@@ -81,13 +78,13 @@ def start_con():
 
         s=str(input("Enter the alphabet\n"))
         s=s.upper()
-        result=base10_valueGenerator(s,list)
+        result=base10_valueGenerator(s,data)
         print(result)
     elif user_input == '2':
         d1 = int(input("Enter first base10 value\t"))
         d2=  int(input("Enter first base10 value\t"))
 
-        result = base26_valueGenerator(d1,d2,list)
+        result = base26_valueGenerator(d1,d2,data)
         print(result)
 
     else:
@@ -95,7 +92,7 @@ def start_con():
         start_con()
 
 
-list={'A':0,'B':1,'C':2,'D':3,'E':4,'F':5,'G':6,'H':7,'I':8,'J':9,'K':10,'L':11,'M':12,'N':13,'O':14,'P':15,'Q':16,'R':17,'S':18,'T':19,'U':20,'v':21,'W':22,'X':23,'Y':24,'Z':25}
+data={'A':0,'B':1,'C':2,'D':3,'E':4,'F':5,'G':6,'H':7,'I':8,'J':9,'K':10,'L':11,'M':12,'N':13,'O':14,'P':15,'Q':16,'R':17,'S':18,'T':19,'U':20,'V':21,'W':22,'X':23,'Y':24,'Z':25}
 
 
 
