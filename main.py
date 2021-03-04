@@ -49,7 +49,7 @@ def base26_valueGenerator(d1,d2,ls):
 
 
             if d1_quo == 0:
-                val1_alph = key + val1_alph
+                
                 run1 = False
 
 
