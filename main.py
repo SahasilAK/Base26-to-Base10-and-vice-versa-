@@ -7,10 +7,10 @@ def base10_valueGenerator(input_string,ls):
         val1=[]
         val2=[]
         for i in split1:
-            val1.append(list[i])
+            val1.append(ls[i])
 
         for i in split2:
-            val2.append(list[i])
+            val2.append(ls[i])
 
 
 
